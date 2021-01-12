@@ -7,7 +7,6 @@
 
     bot.commands = new Discord.Collection();
     bot.cooldowns = new Discord.Collection();
-    bot.xp = 0
     
     const eventFiles = bot.getAllFiles('./events')
     for (const file of eventFiles) {
