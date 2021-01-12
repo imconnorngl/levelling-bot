@@ -10,7 +10,8 @@ module.exports = async (bot, message) => {
     if (message.author.bot) return;
     if (message.channel.type != "text") return;
 
-    xpGenerator(bot, message.author)
+    await xpGenerator(bot, message.author)
+    
     if (!message.content.toLowerCase().startsWith(prefix.toLowerCase())) return;
 
     const args = message.content.slice(prefix.length).split(" ")
