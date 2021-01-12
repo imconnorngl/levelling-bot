@@ -7,7 +7,7 @@ module.exports = {
     description: 'Outputs the xp for a given user.',
 
     run: async (message, args, bot) => {
-        var account = await bot.db.accounts.findOne({ id: message.author.id })
-        message.channel.send(`Your xp is \`${account.xp}\``)
+        var account = await bot.db.accounts.findOne({ id: message.author.id }) || {}
+        message.channel.send(`Your xp is \`${account.xp || 0}\``)
     }
 }
