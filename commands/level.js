@@ -7,7 +7,7 @@ module.exports = {
     description: 'Outputs the level for a given user.',
 
     run: async (message, args, bot) => {
-        var account = await bot.db.accounts.findOne({ id: message.author.id })
+        var account = await bot.db.accounts.findOne({ id: message.author.id }) || {}
         message.channel.send(`Your level is \`${account.level || 0}\``)
     }
 }
