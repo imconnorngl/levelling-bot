@@ -1,0 +1,11 @@
+{
+    "token": "",
+    "prefix": "$",
+    "color": "",
+    "db": {
+        "user": "",
+        "pass": "",
+        "host": "",
+        "name": ""
+    }
+}
