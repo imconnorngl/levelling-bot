@@ -8,6 +8,6 @@ module.exports = {
 
     run: async (message, args, bot) => {
         var account = await bot.db.accounts.findOne({ id: message.author.id })
-        message.channel.send(`Your level is \`${account.level}\``)
+        message.channel.send(`Your level is \`${account.level || 0}\``)
     }
 }
